@@ -101,7 +101,10 @@
 \ifbool{algorithm}{\RequirePackage[linesnumbered]{algorithm2e}}{}
 
 % Erklärungen from Prüfungsamt:
-\newcommand{\Studiengang}{gemäß \textcolor{red}{wähle Studiengang!}}
+\newcommand{\Studiengang}{%
+  \ClassWarning{ttlab-qualify}{Studiengang nicht angegeben!}%
+  gemäß \textcolor{red}{wähle Studiengang!}%
+}
 \newcommand{\BorM}{\textcolor{red}{X}}
 \ifbool{bsc2019}{\renewcommand{\Studiengang}{gemäß \S 35, Abs. 16 der Ordnung für den Bachelorstudiengang Informatik vom 17. Juni 2019:}\renewcommand{\BorM}{Bachelor}}{}
 \ifbool{msc2019}{\renewcommand{\Studiengang}{gemäß \S 34, Abs. 16 der Ordnung für den Masterstudiengang Informatik vom 17. Juni 2019:}\renewcommand{\BorM}{Master}}{}
